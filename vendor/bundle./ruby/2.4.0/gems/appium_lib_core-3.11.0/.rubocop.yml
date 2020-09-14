@@ -1,0 +1,48 @@
+AllCops:
+  TargetRubyVersion: 2.3
+Metrics/LineLength:
+  Max: 128
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Max: 14
+Metrics/PerceivedComplexity:
+  Max: 14
+Metrics/ParameterLists:
+  Enabled: false
+Lint/NestedMethodDefinition:
+  Enabled: false
+# TODO: Replace <<- with <<~ after dropping Ruby 2.2
+Layout/IndentHeredoc:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/CommentedKeyword:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Style/SymbolArray:
+  Enabled: false
+# TODO: will remove after stopping support 2.2
+Style/NumericPredicate:
+  Enabled: false
+Naming/AccessorMethodName:
+  Enabled: false
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+  Exclude:
+    - test/**/*
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+Layout/RescueEnsureAlignment:
+  Enabled: false

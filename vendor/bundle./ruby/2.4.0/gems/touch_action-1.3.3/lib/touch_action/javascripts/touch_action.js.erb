@@ -1,0 +1,47 @@
+(function( touch_action, $, undefined ) {
+
+  // private property
+  var execute_gesture = function() {
+    YUI().use('node-event-simulate', function(Y) {
+      
+      var node = Y.one(touch_action.element);
+      node.simulateGesture(touch_action.gesture, touch_action.options);
+        
+    });
+  };
+
+  // private method
+  function loadYui() { 
+
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "//cdnjs.cloudflare.com/ajax/libs/yui/3.18.0/yui/yui-min.js";
+
+    script.onreadystatechange = execute_gesture;
+    script.onload = execute_gesture;
+
+    head.appendChild(script);
+ 
+  };
+  // public method
+  touch_action.perform = function() {
+    
+    if (typeof YUI == 'undefined') {
+      loadYui();
+    } else {
+      execute_gesture();
+    };
+
+  };
+
+
+}( window.touch_action = window.touch_action || {} ));
+
+touch_action.element = arguments[0];
+
+touch_action.gesture = "<%=gesture%>";
+
+touch_action.options =  <%=options.to_json%>;
+
+touch_action.perform();

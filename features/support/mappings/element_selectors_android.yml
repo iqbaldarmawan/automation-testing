@@ -1,0 +1,11 @@
+Email Field                     : 'textInputEditTextEmail'
+Password Field                  : 'textInputLayoutPassword'
+Login Button                    : 'appCompatButtonLogin'
+Register Text Button            : 'textViewLinkRegister'
+
+Register Name Field             : 'textInputEditTextName'
+Register Email Field            : 'textInputEditTextEmail'
+Register Password Field         : 'textInputEditTextPassword'
+Register Confirm Password Field : 'textInputEditTextConfirmPassword'
+Register Button                 : 'appCompatButtonRegister'
+Register Page Login Button      : 'appCompatTextViewLoginLink'

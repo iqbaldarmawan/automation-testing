@@ -1,0 +1,16 @@
+current directory: /Users/hf/Documents/automation-test/vendor/bundle./ruby/2.4.0/gems/bond-0.5.1/ext/readline_line_buffer
+/Users/hf/.rvm/rubies/ruby-2.4.1/bin/ruby -I /Users/hf/.rvm/rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0 -r ./siteconf20200914-88550-vw76t7.rb extconf.rb
+
+current directory: /Users/hf/Documents/automation-test/vendor/bundle./ruby/2.4.0/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/hf/Documents/automation-test/vendor/bundle./ruby/2.4.0/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR="
+echo "This is a dummy extension"
+This is a dummy extension
+
+current directory: /Users/hf/Documents/automation-test/vendor/bundle./ruby/2.4.0/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR=" install
+echo "This is a dummy extension"
+This is a dummy extension

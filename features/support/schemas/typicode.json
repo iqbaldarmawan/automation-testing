@@ -1,0 +1,6 @@
+  {
+    "userId": "integer",
+    "id": "integer",
+    "title": "string",
+    "body": "string"
+  }
