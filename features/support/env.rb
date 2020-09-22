@@ -19,9 +19,6 @@ require_relative 'mappings/mapper'
 require_relative '../../libs/report_builder/lib/report_builder'
 
 
-DEFAULT_TIMEOUT = ENV['WAIT_TIMEOUT'] || 30
-puts "Default Timeout #{DEFAULT_TIMEOUT}"
-
 class AppiumWorld
 end
 
@@ -29,7 +26,9 @@ class Browser
   include Capybara::DSL
 end
 
+DEFAULT_TIMEOUT = 30
 $environment = Environment.new
+$mapper = Mapper.new($environment)
 
 if $environment.on_android?
 
@@ -38,7 +37,9 @@ if $environment.on_android?
           "platformName": "Android",
           "paltformVersion": "7.0",
           "deviceName": "Android",
-          "app": "assets/login.apk"
+          "app": "assets/login.apk",
+          "unicodeKeyboard": "false",
+          "resetKeyboard": "false"
       },
       appium_lib:{
           server_url: "http://0.0.0.0:4723/wd/hub",
@@ -50,7 +51,6 @@ if $environment.on_android?
   Appium.promote_appium_methods Object
 
 elsif $environment.on_web?
-  $mapper = Mapper.new($environment)
   $browser = Browser.new
   Selenium::WebDriver.logger.level = :error
 end

@@ -1,4 +1,4 @@
-def find(element_name, multidriver=false)
+def find_selector(element_name, multidriver=false)
   #some of steps use xpath directly so dont check the mapper
   if element_name.start_with?('/')
     element_selector = element_name

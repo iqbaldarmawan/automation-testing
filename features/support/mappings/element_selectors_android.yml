@@ -1,5 +1,5 @@
 Email Field                     : 'textInputEditTextEmail'
-Password Field                  : 'textInputLayoutPassword'
+Password Field                  : 'textInputEditTextPassword'
 Login Button                    : 'appCompatButtonLogin'
 Register Text Button            : 'textViewLinkRegister'
 

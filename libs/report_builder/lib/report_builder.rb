@@ -16,7 +16,7 @@ module ReportBuilder
       include_images: true,
       voice_commands: false,
       additional_info: {},
-      report_path: 'test_report',
+      report_path: 'output/test_report',
       color: 'brown'
     }
   end

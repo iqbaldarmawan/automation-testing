@@ -1,5 +1,5 @@
-def wait
-  sleep(2)
+def wait(timeout = DEFAULT_TIMEOUT, &block)
+  wait(default_wait_opts(timeout), &block)
 end
 
 def wait_dissappear(type, name, timeout: DEFAULT_TIMEOUT)

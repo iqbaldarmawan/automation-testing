@@ -1,17 +1,14 @@
 # frozen_string_literal: true
 
 Then(/^I should see "(.+)"$/) do |element_name|
-  if  $environment.on_web?
+  if  $environment.on_web? || $environment.on_android?
     element_find(element_name)
-  if  $environment.on_android?
-    element_text_mobile(element_name).displayed?
-  end
  end
 end
 
-Then(/^I should see (.+) text$/) do |element_name|
-  if  $environment.on_web?
-  assertion_text(element_name)
+Then(/^I should see "(.+)" text$/) do |element_name|
+  if  $environment.on_web? || $environment.on_android?
+    element_text_mobile(element_name).displayed?
   end
 end
 
